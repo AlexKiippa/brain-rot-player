@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            http-equiv="Content-Security-Policy"
+            content="default-src 'none'; media-src https:; style-src {{CSP_SOURCE}} 'unsafe-inline'; img-src {{CSP_SOURCE}} https:;"
+        />
+        <style>
+            html,
+            body {
+                width: 100%;
+                height: 100%;
+                padding: 0;
+                margin: 0;
+            }
+
+            #video {
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                background: #000;
+            }
+
+            #video-player {
+                width: 100%;
+                height: 100%;
+                background: #000;
+                object-fit: cover;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="video">
+            <video
+                id="video-player"
+                src="{{VIDEO_URL}}"
+                autoplay
+                muted
+                controls
+                playsinline
+                preload="auto"
+            ></video>
+        </div>
+    </body>
+</html>
