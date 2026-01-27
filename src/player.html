@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
             http-equiv="Content-Security-Policy"
-            content="default-src 'none'; media-src https:; style-src {{CSP_SOURCE}} 'unsafe-inline'; img-src {{CSP_SOURCE}} https:;"
+            content="default-src 'none'; frame-src https:; media-src https:; style-src {{CSP_SOURCE}} 'unsafe-inline'; img-src {{CSP_SOURCE}} https:;"
         />
         <style>
             html,
@@ -26,7 +26,8 @@
                 background: #000;
             }
 
-            #video-player {
+            #video-player,
+            #game-iframe {
                 width: 100%;
                 height: 100%;
                 background: #000;
@@ -37,15 +38,7 @@
     </head>
     <body>
         <div id="video">
-            <video
-                id="video-player"
-                src="{{VIDEO_URL}}"
-                autoplay
-                muted
-                controls
-                playsinline
-                preload="auto"
-            ></video>
+            {{PLAYER}}
         </div>
     </body>
 </html>
