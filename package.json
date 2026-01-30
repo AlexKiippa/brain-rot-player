@@ -2,7 +2,7 @@
   "name": "brain-rot-player",
   "displayName": "brain-rot-player",
   "description": "Play brainrot videos while you code",
-  "version": "0.0.4",
+  "version": "0.0.7",
   "engines": {
     "vscode": "^1.108.1"
   },

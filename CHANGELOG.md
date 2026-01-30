@@ -15,3 +15,9 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ## [0.0.4]
 
 - Added: Minecraft parkour, Family Guy and Grand Theft Auto V Car videos
+
+## [0.0.7]
+
+- Updated links
+
+

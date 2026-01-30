@@ -8,7 +8,7 @@ export function activate(context: vscode.ExtensionContext) {
 	const disposable = vscode.commands.registerCommand('brain-rot-player.brainrot', async () => {
 		const options = ['Subway Surfer', 'Minecraft parkour', 'Family Guy', 'Grand Theft Auto V Car', 'Subway Surfers Game'];
 		const videoUrls: { [key: string]: string } = {
-			'Subway Surfer': 'https://0xcc.fi/b/subwaysurfers.mp4',
+			'Subway Surfer': 'https://0xcc.fi/b/brainrot/subwaysurfers.mp4',
 			'Minecraft parkour': 'https://0xcc.fi/b/brainrot/minecraft.mp4',
 			'Family Guy': 'https://0xcc.fi/b/brainrot/familyguy.mp4',
 			'Grand Theft Auto V Car': 'https://0xcc.fi/b/brainrot/gtav.mp4',
@@ -37,7 +37,7 @@ export function activate(context: vscode.ExtensionContext) {
 				}
 			);
 
-			const playerHtmlPath = path.join(context.extensionPath, 'src', 'player.html');
+			const playerHtmlPath = path.join(context.extensionPath, 'out', 'player.html');
 			let playerHtml = fs.readFileSync(playerHtmlPath, 'utf8');
 
 			let playerContent = '';
