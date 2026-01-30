@@ -11,6 +11,9 @@
   ],
   "activationEvents": [],
   "main": "./out/extension.js",
+  "repository": "https://github.com/AlexKiippa/brain-rot-player",
+  "publisher": "AlexKiippa",
+  "icon": "image.jpg",
   "contributes": {
     "commands": [
       {
@@ -19,6 +22,7 @@
       }
     ]
   },
+  "pricing": "Free",
   "scripts": {
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",

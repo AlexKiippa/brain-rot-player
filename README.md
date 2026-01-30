@@ -1,71 +1,54 @@
-# brain-rot-player README
+# brain-rot-player
 
-This is the README for your extension "brain-rot-player". After writing up a brief description, we recommend including the following sections.
+Play brain-rot videos (or a game) in a VS Code webview while you code.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
-
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+- Launch a quick-pick of brain-rot options from the Command Palette.
+- Plays a video in an embedded webview with controls.
+- Includes an option to open a Subway Surfers game in an iframe.
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+- VS Code ^1.108.1
+- An internet connection for remote video/game URLs
 
-## Extension Settings
+## Usage
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+1. Open the Command Palette (`Cmd+Shift+P` on macOS, `Ctrl+Shift+P` on Windows/Linux).
+2. Run `Brainrot`.
+3. Pick an option from the list.
 
-For example:
+## Commands
 
-This extension contributes the following settings:
+- `brain-rot-player.brainrot`: Open the brain-rot picker and play the selected item.
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+## Configuration
 
-## Known Issues
+This extension currently does not contribute any settings.
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+## Customizing content
 
-## Release Notes
+Video and game URLs are hardcoded in `src/extension.ts`. To add or replace items:
 
-Users appreciate release notes as you update your extension.
+1. Update the `options` array.
+2. Add a matching entry in `videoUrls`.
+3. Rebuild the extension (`npm run compile`).
 
-### 1.0.0
+## Known issues
 
-Initial release of ...
+- Some options still use `REPLACE_WITH_URL` placeholders and will show an info message when selected.
+- Remote content availability and playback depends on the hosting source.
 
-### 1.0.1
+## Release notes
 
-Fixed issue #.
+### 0.0.1
 
-### 1.1.0
+- Initial preview release.
 
-Added features X, Y, and Z.
+## Development
 
----
+- `npm run compile` builds the extension.
+- `npm run watch` rebuilds on change.
+- `npm run lint` runs ESLint.
 
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
