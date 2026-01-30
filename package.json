@@ -2,7 +2,7 @@
   "name": "brain-rot-player",
   "displayName": "brain-rot-player",
   "description": "Play brainrot videos while you code",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "engines": {
     "vscode": "^1.108.1"
   },
@@ -24,8 +24,9 @@
   },
   "pricing": "Free",
   "scripts": {
-    "vscode:prepublish": "npm run compile",
+    "vscode:prepublish": "npm run compile && npm run copy:assets",
     "compile": "tsc -p ./",
+    "copy:assets": "node -e \"const fs=require('fs');fs.mkdirSync('out',{recursive:true});fs.copyFileSync('src/player.html','out/player.html');\"",
     "watch": "tsc -watch -p ./",
     "pretest": "npm run compile && npm run lint",
     "lint": "eslint src",

@@ -37,7 +37,7 @@ export function activate(context: vscode.ExtensionContext) {
 				}
 			);
 
-			const playerHtmlPath = path.join(context.extensionPath, 'media', 'player.html');
+			const playerHtmlPath = path.join(context.extensionPath, 'src', 'player.html');
 			let playerHtml = fs.readFileSync(playerHtmlPath, 'utf8');
 
 			let playerContent = '';
