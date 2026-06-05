@@ -56,5 +56,5 @@ Video and game URLs are hardcoded in `src/extension.ts`. To add or replace items
 
 ## Credits
 
-- Subway Surfers game embed: CodeSandbox demo by <author/handle if known> (https://codesandbox.io/p/sandbox/subway-surfers-ly4fsf)
+- Subway Surfers game embed: CodeSandbox demo by yell0wsuit (https://codesandbox.io/p/sandbox/subway-surfers-ly4fsf)
 
